@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/sheet"
 import { ShoppingCart } from "lucide-react"
 import { SidebarRight } from "@/components/molecules/SidebarRight"
+import { Toaster } from "@/components/ui/sonner"
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -26,6 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </SheetTrigger>
               <SidebarRight />
             </Sheet>
+            <Toaster />
         </div>
     </SidebarProvider>
   )

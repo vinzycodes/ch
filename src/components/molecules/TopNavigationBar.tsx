@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSidebar } from '@/components/ui/sidebar'
-import { Menu, ShoppingCart } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import Image from 'next/image'
 
 

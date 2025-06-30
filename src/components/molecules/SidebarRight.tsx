@@ -74,16 +74,13 @@ export function SidebarRight() {
 
                   </SheetDescription>
                   </SheetHeader>
-                  <SheetFooter>
-
-                    <Separator />
+                  <SheetFooter className="flex flex-row items-center justify-between">
                     <span className="text-2xl font-bold">Total: {cartItems.reduce((total, item) => total + item.price, 0).toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}</span>
                     <Dialog>
                       <DialogTrigger asChild disabled={cartItems.length === 0}>
-                        <Button variant={"default"}>Checkout</Button>
+                        <Button className="h-[50px] font-bold" variant={"default"}>I&apos;m good</Button>
                       </DialogTrigger>
                       <DialogContent className="bg-white">
-
                           <div>
                             <Carousel>
                               <CarouselContent>
@@ -91,12 +88,12 @@ export function SidebarRight() {
                                   <h1 className="text-3xl font-semibold">Step 1</h1>
                                   <Separator className="my-3"/>
                                   <div className="flex justify-between items-center">
-                                    Print your receipt
+                                    Check your goods, then print your receipt!
                                     <Button className="border-1 shadow-md mx-3" onClick={HandlePrint} variant={"default"}>
                                       Print <Printer />
                                     </Button>
                                   </div>
-                                  <div className="max-h-[500px] overflow-y-auto">
+                                  <div className="max-h-[500px] mt-2 overflow-y-auto">
                                     {
                                       cartItems.map((item, index) => (
                                         <div key={index} className="flex my-3 flex-col justify-start items-start mb-2">
@@ -112,6 +109,8 @@ export function SidebarRight() {
                                         </div>
                                       ))
                                     }
+                                    <Separator className="my-3" />
+                                    <span className="text-2xl font-bold">Total: {cartItems.reduce((total, item) => total + item.price, 0).toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}</span>
                                   </div>
                                 </CarouselItem>
                                 <CarouselItem>
@@ -130,7 +129,7 @@ export function SidebarRight() {
                                   <br />
 
                                   <Separator />
-                                  <h2 className="text-2xl mt-4 text-center">Thank you for your order!</h2>
+                                  <h2 className="text-2xl mt-4 font-bold text-center">Thank you for your order!</h2>
                                 </CarouselItem>
                               </CarouselContent>
                               <CarouselPrevious />

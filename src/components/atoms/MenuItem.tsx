@@ -28,6 +28,7 @@ import { Separator } from '@radix-ui/react-separator'
 import { Textarea } from "@/components/ui/textarea"
 import { useAtom } from 'jotai'
 import { addToCart } from '@/store'
+import { toast } from 'sonner';
 
 
 const MenuItem = ({ name, details, price, modifications }: ItemType) => {
@@ -166,6 +167,16 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                                         const syncedMods = getSyncedModifications(modifications, selectedOptions);
                                         addToCartAtom({ ...order, modifications: syncedMods, price: recalculateTotalPrice(price, syncedMods), id: crypto.randomUUID() });
                                         setOpen(false); // Close the dialog after adding to cart
+                                        toast.success(`${name} has been added to your cart!`, {
+                                          duration: 3000,
+                                          position: 'bottom-right',
+                                          style: {
+                                            background: '#fff',
+                                            color: '#000',
+                                            borderRadius: '8px',
+                                            padding: '16px',
+                                          },
+                                        });
                                       }}
                                     >Add to cart</Button>
                                   </div>
