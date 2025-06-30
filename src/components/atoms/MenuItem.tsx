@@ -79,12 +79,12 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
               </div>
               <CardHeader className='flex flex-col md:flex-row px-5 justify-between items-start md:items-center'>
                   <CardTitle className='mx-1'>{name}</CardTitle>
-                  <CardAction className=''>
+                  <CardAction className='mx-1'>
                       {price?.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}
                   </CardAction>
               </CardHeader>
               <CardContent className='my-2'>
-                <CardDescription className='hidden md:block'>
+                <CardDescription className='hidden block'>
                       {details}
                 </CardDescription>
               </CardContent>

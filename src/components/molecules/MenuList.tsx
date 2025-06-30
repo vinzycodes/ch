@@ -10,7 +10,7 @@ const MenuList = ({ category, products }: MenuItemType ) => {
             <h1 className='static xl:absolute xl:right-[100px] z-50 mb-6 ml-2 text-5xl font-light tracking-widest'>{category}</h1>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 [&>*]:h-[280px] md:[&>*]:h-[400px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 [&>*]:h-[350px] md:[&>*]:h-[400px]">
             {products.map((item: ItemType, index: React.Key | null | undefined) => (
                 <MenuItem key={index} name={item.name} details={item.details} price={item.price} modifications={item.modifications} />
             ))}
