@@ -121,10 +121,10 @@ export function SidebarRight() {
                                     <Image width={200} height={200} src={"/qr.jpg"} alt={""} />
                                   </div>
                                   <br />
-                                  <strong>Note: please screenshot your gcash transaction, this will serve as your proof of payment</strong> 
+                                  <strong>Note: screenshot your gcash transaction, this will serve as your proof of payment</strong> 
                                   <br />
                                   <br />
-                                  <span className="mt-5">After this, please send us the printed order details and Gcash transaction receipt at <a className="text-sky-700 cursor-pointer" href="https://www.instagram.com/communehaus" target="_blank" rel="noopener noreferrer">@communehaus</a></span>
+                                  <span className="mt-5">After this, send us the printed order details and Gcash transaction receipt at <a className="text-sky-700 cursor-pointer" href="https://www.instagram.com/communehaus" target="_blank" rel="noopener noreferrer">@communehaus</a></span>
                                   <br />  
                                   <br />
                                 </CarouselItem>
