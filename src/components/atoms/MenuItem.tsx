@@ -25,7 +25,6 @@ import { ModificationType } from '@/lib/types'
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Separator } from '@radix-ui/react-separator'
-import { Textarea } from "@/components/ui/textarea"
 import { useAtom } from 'jotai'
 import { addToCart } from '@/store'
 import { toast } from 'sonner';
@@ -156,7 +155,6 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                                       
                                     </div>
                                   ))}
-                                  <Textarea className='mb-4' placeholder="Notes to the barista" />
                                   <div className='flex justify-between'>
                                     <span className='font-bold text-black text-2xl'>
                                       {totalPrice.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}

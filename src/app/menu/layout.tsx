@@ -22,8 +22,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {children}
             </main>
             <Sheet>
-              <SheetTrigger className="absolute top-9 right-10 pt-2">
-                <ShoppingCart className='w-10 h-10 cursor-pointer' />
+              <SheetTrigger className="fixed flex flex-row shadow-md hover:shadow-lg justify-center items-center rounded-full p-5 bg-white bottom-5 right-5 md:bottom-10 md:right-10">
+                <ShoppingCart className='w-7 h-7 cursor-pointer font-bold' />
               </SheetTrigger>
               <SidebarRight />
             </Sheet>
