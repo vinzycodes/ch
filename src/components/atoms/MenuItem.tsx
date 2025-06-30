@@ -78,7 +78,7 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                       className="object-cover bg-gray-100 rounded-lg" />
               </div>
               <CardHeader className='flex flex-col md:flex-row px-5 justify-between items-start md:items-center'>
-                  <CardTitle>{name}</CardTitle>
+                  <CardTitle className='mx-1'>{name}</CardTitle>
                   <CardAction className=''>
                       {price?.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}
                   </CardAction>
@@ -95,7 +95,7 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                     className='cursor-pointer font-semibold rounded-md border py-3 w-[100%] bg-[#2D1E14] hover:bg-[#422922] text-white transition-all'
                     onClick={() => setOpen(true)}
                   >
-                    View
+                    View / Add
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>

@@ -44,7 +44,7 @@ export function SidebarRight() {
                   <SheetDescription>
                     <div>
                       {cartItems.length === 0 ? (
-                        <div className="text-center text-gray-500">
+                        <div className="text-center mt-10 text-gray-500">
                           Your cart is empty.
                         </div>
                       ) : (
@@ -56,7 +56,7 @@ export function SidebarRight() {
                                 <span> - {item.price.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}</span>
                               </div>
                               <div>
-                                <Button variant="outline" className="ml-2 hover:bg-[initial] border-0 shadow-none" onClick={() => removeFromCartFn(item)}>
+                                <Button variant="outline" className="cursor-pointer ml-2 hover:bg-[initial] border-0 shadow-none" onClick={() => removeFromCartFn(item)}>
                                   <Trash2 />
                                 </Button>
                               </div>
@@ -85,7 +85,7 @@ export function SidebarRight() {
                             <Carousel>
                               <CarouselContent>
                                 <CarouselItem>
-                                  <h1 className="text-3xl font-semibold">Step 1</h1>
+                                  <h1 className="text-3xl font-semibold">Step 1 - Print Receipt</h1>
                                   <Separator className="my-3"/>
                                   <div className="flex justify-between items-center">
                                     Check your goods, then print your receipt!
@@ -114,14 +114,14 @@ export function SidebarRight() {
                                   </div>
                                 </CarouselItem>
                                 <CarouselItem>
-                                  <h1 className="text-3xl font-semibold">Step 2</h1>
+                                  <h1 className="text-3xl font-semibold">Step 2 - Pay</h1>
                                   <Separator className="my-3"/>
                                   <span>Scan this QR code and pay the total amount: {cartItems.reduce((total, item) => total + item.price, 0).toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}</span>
                                   <div className="w-full flex justify-center items-center mt-4">
                                     <Image width={200} height={200} src={"/qr.jpg"} alt={""} />
                                   </div>
                                   <br />
-                                  <strong>Note: screenshot your gcash transaction, this will serve as your proof of payment</strong> 
+                                  <strong>Note: screenshot your transaction, this will serve as your proof of payment</strong> 
                                   <br />
                                   <br />
                                   <span className="mt-5">After this, send us the printed order details and Gcash transaction receipt at <a className="text-sky-700 cursor-pointer" href="https://www.instagram.com/communehaus" target="_blank" rel="noopener noreferrer">@communehaus</a></span>
