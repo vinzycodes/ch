@@ -167,7 +167,7 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                                         setOpen(false); // Close the dialog after adding to cart
                                         toast.success(`${name} has been added to your cart!`, {
                                           duration: 3000,
-                                          position: 'bottom-right',
+                                          position: 'top-right',
                                           style: {
                                             background: '#fff',
                                             color: '#000',
