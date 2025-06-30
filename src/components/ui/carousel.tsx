@@ -173,7 +173,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 
 function CarouselPrevious({
   className,
-  variant = "outline",
+  variant = "default",
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
@@ -185,7 +185,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "mt-5 size-8 bg-black hover:bg-black@90 text-white hover:text-white rounded-full",
+        "mt-5 size-8 rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -203,7 +203,7 @@ function CarouselPrevious({
 
 function CarouselNext({
   className,
-  variant = "outline",
+  variant = "default",
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
@@ -215,7 +215,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "mt-5 bg-[#2D1E14] hover:bg-[#2D1E14] text-white hover:text-white size-8 rounded-full",
+        "mt-5 size-8 float-right rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
