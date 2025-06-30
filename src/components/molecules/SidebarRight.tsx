@@ -93,7 +93,7 @@ export function SidebarRight() {
                                       Print <Printer />
                                     </Button>
                                   </div>
-                                  <div className="max-h-[500px] mt-2 overflow-y-auto">
+                                  <div className="max-h-[400px] mt-3 overflow-y-auto">
                                     {
                                       cartItems.map((item, index) => (
                                         <div key={index} className="flex my-3 flex-col justify-start items-start mb-2">
