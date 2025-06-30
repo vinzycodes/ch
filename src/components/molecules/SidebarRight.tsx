@@ -127,9 +127,6 @@ export function SidebarRight() {
                                   <span className="mt-5">After this, please send us the printed order details and Gcash transaction receipt at <a className="text-sky-700 cursor-pointer" href="https://www.instagram.com/communehaus" target="_blank" rel="noopener noreferrer">@communehaus</a></span>
                                   <br />  
                                   <br />
-
-                                  <Separator />
-                                  <h2 className="text-2xl mt-4 font-bold text-center">Thank you for your order!</h2>
                                 </CarouselItem>
                               </CarouselContent>
                               <CarouselPrevious />
