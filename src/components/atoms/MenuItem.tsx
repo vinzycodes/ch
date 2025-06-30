@@ -67,7 +67,6 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
   }
 
   return (
-    <div>
         <Card className='flex flex-col justify-between gap-4 bg-[rgba(255,255,255,.3)] hover:bg-white hover:shadow-xl transition-all duration-400'>
             <div>
               <div className='w-[100%] px-5 mb-4 flex items-center justify-center '>
@@ -78,14 +77,14 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                       height={300}
                       className="object-cover bg-gray-100 rounded-lg" />
               </div>
-              <CardHeader className='flex justify-between items-center'>
+              <CardHeader className='flex flex-col md:flex-row px-5 justify-between items-start md:items-center'>
                   <CardTitle>{name}</CardTitle>
-                  <CardAction className='ml-2'>
+                  <CardAction className=''>
                       {price?.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}
                   </CardAction>
               </CardHeader>
               <CardContent className='my-2'>
-                <CardDescription>
+                <CardDescription className='hidden md:block'>
                       {details}
                 </CardDescription>
               </CardContent>
@@ -165,7 +164,7 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                                       className='font-semibold bg-[#2D1E14] hover:bg-[#422922] text-white transition-all'
                                       onClick={() => {
                                         const syncedMods = getSyncedModifications(modifications, selectedOptions);
-                                        addToCartAtom({ ...order, modifications: syncedMods, price: recalculateTotalPrice(price, syncedMods) });
+                                        addToCartAtom({ ...order, modifications: syncedMods, price: recalculateTotalPrice(price, syncedMods), id: crypto.randomUUID() });
                                         setOpen(false); // Close the dialog after adding to cart
                                       }}
                                     >Add to cart</Button>
@@ -183,7 +182,6 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                 </Dialog>
             </CardFooter>
         </Card>
-    </div>
   )
 }
 

@@ -16,7 +16,7 @@ const TopNavigationBar = () => {
         <div className='flex'>
             <Image src="/main-logo-2.png" alt="Coffee Shop Image" width={200} height={100} />
         </div>
-        <div></div>
+        <div className='w-[40px] h-[40px]'></div>
     </div>
   )
 }

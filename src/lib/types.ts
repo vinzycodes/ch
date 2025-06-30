@@ -4,6 +4,7 @@ export interface MenuItemType {
 }
 
 export interface ItemType {
+    id?: string;
     name: string;
     details?: string;
     modifications?: ModificationType[];

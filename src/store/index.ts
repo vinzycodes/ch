@@ -7,3 +7,9 @@ export const addToCart = atom(null, (get, set, item: ItemType) => {
   const currentCart = get(cart)
   set(cart, [...currentCart, item])
 })
+
+export const removeFromCart = atom(null, (get, set, item: ItemType) => {
+  const currentCart = get(cart)
+  const updatedCart = currentCart.filter(cartItem => cartItem.id !== item.id)
+  set(cart, updatedCart)
+})

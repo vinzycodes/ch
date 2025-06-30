@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {children}
             </main>
             <Sheet>
-              <SheetTrigger className="absolute top-10 right-10 pt-2">
+              <SheetTrigger className="absolute top-9 right-10 pt-2">
                 <ShoppingCart className='w-10 h-10 cursor-pointer' />
               </SheetTrigger>
               <SidebarRight />
