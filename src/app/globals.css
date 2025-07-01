@@ -113,14 +113,9 @@
   --sidebar-ring: rgba(255,255,255,0.7);
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Dan';
-
-  color: #422922;
-}
-
-.font-benguiat {
-  font-family: 'Dan';
+h1,h2,h3,h4,h5,h6,
+.font-benguiat  {
+  font-family: 'Benguiat', serif;
   color: #422922;
 }
 

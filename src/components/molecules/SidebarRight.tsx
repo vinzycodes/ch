@@ -98,8 +98,8 @@ export function SidebarRight() {
                                       cartItems.map((item, index) => (
                                         <div key={index} className="flex my-3 flex-col justify-start items-start mb-2">
                                           <div>
-                                              <span className="font-semiboldtext-lg">{item.name}</span>
-                                              <span> - {item.price.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}</span>
+                                              <span className="font-semibold text-lg">{item.name}</span>
+                                              <span className="font-semibold"> - {item.price.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })}</span>
                                           </div>
                                           {item.modifications?.map((modification, modIndex) => (
                                             <span key={modIndex} className="text-sm text-gray-500">

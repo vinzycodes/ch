@@ -135,7 +135,7 @@ const MenuItem = ({ name, details, price, modifications }: ItemType) => {
                                           });
                                           setTotalPrice(recalculateTotalPrice(price, updatedMods));
                                         }}
-                                        className='flex flex-col space-y-2'
+                                        className='flex flex-col gap-1 mt-2'
                                       >
                                         {modification.options.map((option, optionIndex) => (
                                           <div className="flex items-center space-x-2" key={optionIndex}>
